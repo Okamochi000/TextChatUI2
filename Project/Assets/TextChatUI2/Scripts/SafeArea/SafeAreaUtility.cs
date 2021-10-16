@@ -1,13 +1,13 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ƒZ[ƒtƒGƒŠƒA‚Ì”Ä—pˆ—
+/// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢ã®æ±ç”¨å‡¦ç†
 /// </summary>
 public static class SafeAreaUtility
 {
     /// <summary>
-    /// ƒZ[ƒtƒGƒŠƒA‚ª‚ ‚é‚©
+    /// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢ãŒã‚ã‚‹ã‹
     /// </summary>
     /// <returns></returns>
     public static bool IsSafeArea()
@@ -22,7 +22,7 @@ public static class SafeAreaUtility
     }
 
     /// <summary>
-    /// Œ»İ‚ÌƒZ[ƒtƒGƒŠƒA‚Æˆê’v‚·‚é‚©
+    /// ç¾åœ¨ã®ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢ã¨ä¸€è‡´ã™ã‚‹ã‹
     /// </summary>
     /// <param name="safeArea"></param>
     /// <returns></returns>
@@ -36,7 +36,7 @@ public static class SafeAreaUtility
     }
 
     /// <summary>
-    /// ƒLƒƒƒ“ƒoƒX‚ÌƒXƒP[ƒ‹’l‚ğæ“¾‚·‚é
+    /// ã‚­ãƒ£ãƒ³ãƒã‚¹ã®ã‚¹ã‚±ãƒ¼ãƒ«å€¤ã‚’å–å¾—ã™ã‚‹
     /// </summary>
     /// <param name="transform"></param>
     /// <returns></returns>
@@ -54,7 +54,7 @@ public static class SafeAreaUtility
     }
 
     /// <summary>
-    /// eƒLƒƒƒ“ƒoƒX‚ğæ“¾‚·‚é
+    /// è¦ªã‚­ãƒ£ãƒ³ãƒã‚¹ã‚’å–å¾—ã™ã‚‹
     /// </summary>
     /// <param name="transform"></param>
     /// <returns></returns>
@@ -68,7 +68,7 @@ public static class SafeAreaUtility
     }
 
     /// <summary>
-    /// ƒZ[ƒtƒGƒŠƒAŠOæ“¾
+    /// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢å¤–å–å¾—
     /// </summary>
     /// <param name="transform"></param>
     /// <param name="offsetMin"></param>
@@ -80,7 +80,7 @@ public static class SafeAreaUtility
     }
 
     /// <summary>
-    /// ƒZ[ƒtƒGƒŠƒAŠOæ“¾(ƒ{ƒgƒ€AƒŒƒtƒg)
+    /// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢å¤–å–å¾—(ãƒœãƒˆãƒ ã€ãƒ¬ãƒ•ãƒˆ)
     /// </summary>
     /// <param name="transform"></param>
     /// <returns></returns>
@@ -99,7 +99,7 @@ public static class SafeAreaUtility
     }
 
     /// <summary>
-    /// ƒZ[ƒtƒGƒŠƒAŠOæ“¾(ƒgƒbƒvAƒ‰ƒCƒg)
+    /// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢å¤–å–å¾—(ãƒˆãƒƒãƒ—ã€ãƒ©ã‚¤ãƒˆ)
     /// </summary>
     /// <param name="transform"></param>
     /// <returns></returns>

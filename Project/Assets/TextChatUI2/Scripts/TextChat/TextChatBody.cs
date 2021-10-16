@@ -1,18 +1,18 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ƒeƒLƒXƒgƒ`ƒƒƒbƒg‚ÌƒƒbƒZ[ƒW•\¦—“
+/// ãƒ†ã‚­ã‚¹ãƒˆãƒãƒ£ãƒƒãƒˆã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸è¡¨ç¤ºæ¬„
 /// </summary>
 public class TextChatBody : MonoBehaviour
 {
     /// <summary>
-    /// ƒRƒƒ“ƒg‚Ìí—Ş
+    /// ã‚³ãƒ¡ãƒ³ãƒˆã®ç¨®é¡
     /// </summary>
     public enum CommentType
     {
-        Mine,       // ©g
-        Opponent    // ‘Šè
+        Mine,       // è‡ªèº«
+        Opponent    // ç›¸æ‰‹
     }
 
     [SerializeField] private ScrollRect scrollRect = null;
@@ -26,7 +26,7 @@ public class TextChatBody : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒXƒNƒ[ƒ‹‚ğˆê”Ô‰º‚ÉˆÚ“®‚·‚é
+    /// ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚’ä¸€ç•ªä¸‹ã«ç§»å‹•ã™ã‚‹
     /// </summary>
     public void SetBottomPosition()
     {
@@ -34,7 +34,7 @@ public class TextChatBody : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒŒƒCƒAƒEƒgXV
+    /// ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ›´æ–°
     /// </summary>
     public void UpdateLayout()
     {
@@ -56,7 +56,7 @@ public class TextChatBody : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒRƒƒ“ƒg‚ğ’Ç‰Á
+    /// ã‚³ãƒ¡ãƒ³ãƒˆã‚’è¿½åŠ 
     /// </summary>
     /// <param name="commentType"></param>
     /// <param name="message"></param>

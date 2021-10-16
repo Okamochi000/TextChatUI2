@@ -1,8 +1,8 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ƒZ[ƒtƒGƒŠƒA–³‹ƒŒƒCƒAƒEƒg
+/// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢ç„¡è¦–ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ
 /// </summary>
 public class IgnoneSafeAreaLayout : SafeAreaBehaviour
 {
@@ -41,7 +41,7 @@ public class IgnoneSafeAreaLayout : SafeAreaBehaviour
     }
 
     /// <summary>
-    /// ƒmƒbƒW‚ğXV‚·‚é
+    /// ãƒãƒƒã‚¸ã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     protected override void UpdateLayout()
     {
@@ -49,13 +49,13 @@ public class IgnoneSafeAreaLayout : SafeAreaBehaviour
 
         isSafeAreaLayout_ = false;
 
-        // ƒAƒ“ƒJ[İ’è
+        // ã‚¢ãƒ³ã‚«ãƒ¼è¨­å®š
         RectTransform selfRectTransform = GetRectTransform();
         selfRectTransform.pivot = new Vector2(0.5f, 0.5f);
         selfRectTransform.anchorMin = Vector2.zero;
         selfRectTransform.anchorMax = Vector2.one;
 
-        // ƒTƒCƒYİ’è
+        // ã‚µã‚¤ã‚ºè¨­å®š
         Vector2 sizeDelta = canvasRectTransform_.sizeDelta;
         Vector2 outsideOffsetMin = SafeAreaUtility.GetOutsideOffsetMin(this.transform);
         Vector2 outsideOffsetMax = SafeAreaUtility.GetOutsideOffsetMax(this.transform);
@@ -66,7 +66,7 @@ public class IgnoneSafeAreaLayout : SafeAreaBehaviour
         selfRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sizeDelta.x);
         selfRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, sizeDelta.y);
 
-        // À•Wİ’è
+        // åº§æ¨™è¨­å®š
         Vector3 centerPosition = canvasRectTransform_.position;
         if (isTopSafeArea) { centerPosition.y += (outsideOffsetMax.y / 2.0f); }
         if (isBottomSafeArea) { centerPosition.y += (outsideOffsetMin.y / 2.0f); }
@@ -76,7 +76,7 @@ public class IgnoneSafeAreaLayout : SafeAreaBehaviour
     }
 
     /// <summary>
-    /// eSafeAreaLayout‚ğæ“¾‚·‚é
+    /// è¦ªSafeAreaLayoutã‚’å–å¾—ã™ã‚‹
     /// </summary>
     /// <param name="transform"></param>
     /// <returns></returns>

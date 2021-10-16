@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 [DisallowMultipleComponent]
@@ -31,7 +31,7 @@ public class TextChatInputMenu : MonoBehaviour
         if (barRectTransform == null) { return; }
         if (keyboardRectTransform == null) { return; }
 
-        // ƒGƒfƒBƒ^[•ÒW’†
+        // ã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ç·¨é›†ä¸­
         Vector2 menuSizeDelta = menuRectTransform.sizeDelta;
         if (!Application.isPlaying)
         {
@@ -40,7 +40,7 @@ public class TextChatInputMenu : MonoBehaviour
             return;
         }
 
-        // ƒeƒLƒXƒgc•‚É‡‚í‚¹‚é
+        // ãƒ†ã‚­ã‚¹ãƒˆç¸¦å¹…ã«åˆã‚ã›ã‚‹
         float currentHeight = (inputField.textComponent.preferredHeight + topPadding + bottomPadding);
         if (inputField.textComponent.cachedTextGenerator.lineCount <= 1) { currentHeight = minHeight; }
         float height = Mathf.Max(minHeight, currentHeight);
@@ -48,7 +48,7 @@ public class TextChatInputMenu : MonoBehaviour
         height = Mathf.Min(height, maxHeight);
         if (height != menuSizeDelta.y || keyboardRectTransform.sizeDelta.y != GetKeyboardHeight()) { UpdateLayout(height); }
 
-        // ƒ‚ƒoƒCƒ‹ƒL[ƒ{[ƒh‚ğ•\¦‚µ‚½‚Æ‚«‚É•\¦‚³‚ê‚éƒz[ƒ€ƒƒjƒ…[‚ÌƒTƒCƒY•ª‰¡•‚ğ’²®‚·‚é
+        // ãƒ¢ãƒã‚¤ãƒ«ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚’è¡¨ç¤ºã—ãŸã¨ãã«è¡¨ç¤ºã•ã‚Œã‚‹ãƒ›ãƒ¼ãƒ ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ã‚µã‚¤ã‚ºåˆ†æ¨ªå¹…ã‚’èª¿æ•´ã™ã‚‹
 #if !UNITY_EDITOR && UNITY_ANDROID
         float width = menuRectTransform.rect.width;
         float keyboardWidth = UniSoftwareKeyboardArea.SoftwareKeyboardArea.GetLandscapeHomeWidth() * canvasScale_;
@@ -62,14 +62,14 @@ public class TextChatInputMenu : MonoBehaviour
         barRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
 #endif
 
-        // ƒ{ƒ^ƒ“ó‘ÔØ‘Ö
+        // ãƒœã‚¿ãƒ³çŠ¶æ…‹åˆ‡æ›¿
         if (sendButton != null)
         {
             if (inputField != null && inputField.text.Length > 0) { sendButton.interactable = true; }
             else { sendButton.interactable = false; }
         }
 
-        // ƒL[ƒ{[ƒh•\¦’†‚Íí‚Éˆê”Ô‰º‚ÉƒXƒNƒ[ƒ‹‚·‚é
+        // ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰è¡¨ç¤ºä¸­ã¯å¸¸ã«ä¸€ç•ªä¸‹ã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹
         if (inputField.touchScreenKeyboard != null)
         {
             textChatBody.SetBottomPosition();
@@ -77,27 +77,27 @@ public class TextChatInputMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// ‘—M
+    /// é€ä¿¡
     /// </summary>
     public void Send()
     {
         if (inputField == null) { return; }
         if (inputField.text == "") { return; }
 
-        // ƒRƒƒ“ƒg’Ç‰Á
+        // ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
         if (textChatBody != null) { textChatBody.AddComment(TextChatBody.CommentType.Mine, inputField.text); }
 
-        // ƒXƒNƒ[ƒ‹ˆÊ’u‚ğ’²®
+        // ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ä½ç½®ã‚’èª¿æ•´
         textChatBody.UpdateLayout();
         textChatBody.SetBottomPosition();
 
-        // ƒeƒLƒXƒg‰Šú‰»
+        // ãƒ†ã‚­ã‚¹ãƒˆåˆæœŸåŒ–
         inputField.text = "";
         if (sendButton != null) { sendButton.interactable = false; }
     }
 
     /// <summary>
-    /// ƒŒƒCƒAƒEƒgXV
+    /// ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ›´æ–°
     /// </summary>
     /// <param name="height"></param>
     private void UpdateLayout(float height)
@@ -128,7 +128,7 @@ public class TextChatInputMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒL[ƒ{[ƒh‚Ì‚‚³‚ğæ“¾‚·‚é
+    /// ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®é«˜ã•ã‚’å–å¾—ã™ã‚‹
     /// </summary>
     /// <returns></returns>
     private float GetKeyboardHeight()

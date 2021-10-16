@@ -1,7 +1,7 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /// <summary>
-/// ƒZ[ƒtƒGƒŠƒA•ª‚ÌƒIƒtƒZƒbƒgŠg’£
+/// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢åˆ†ã®ã‚ªãƒ•ã‚»ãƒƒãƒˆæ‹¡å¼µ
 /// </summary>
 public class SafeAreaExpansion : SafeAreaBehaviour
 {
@@ -11,7 +11,7 @@ public class SafeAreaExpansion : SafeAreaBehaviour
     [SerializeField] private bool isRight = false;
 
     /// <summary>
-    /// ƒmƒbƒW‚ğXV‚·‚é
+    /// ãƒãƒƒã‚¸ã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     protected override void UpdateLayout()
     {

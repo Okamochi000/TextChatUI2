@@ -1,15 +1,15 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ‚«o‚µ
+/// å¹ãå‡ºã—
 /// </summary>
 public class SpeechBundle : MonoBehaviour
 {
     [SerializeField] private Text text = null;
 
     /// <summary>
-    /// ƒeƒLƒXƒg‚ğİ’è‚·‚é
+    /// ãƒ†ã‚­ã‚¹ãƒˆã‚’è¨­å®šã™ã‚‹
     /// </summary>
     /// <param name="message"></param>
     public void SetText(string message)
@@ -18,7 +18,7 @@ public class SpeechBundle : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒŒƒCƒAƒEƒgXV
+    /// ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ›´æ–°
     /// </summary>
     public void UpdateLayout()
     {

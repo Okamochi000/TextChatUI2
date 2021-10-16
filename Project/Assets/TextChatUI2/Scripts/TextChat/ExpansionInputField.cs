@@ -1,9 +1,9 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// —ÌˆæŠOƒ^ƒbƒv‚Å•Â‚¶‚È‚¢InputField
+/// é ˜åŸŸå¤–ã‚¿ãƒƒãƒ—ã§é–‰ã˜ãªã„InputField
 /// </summary>
 public class ExpansionInputField : InputField
 {
@@ -17,7 +17,7 @@ public class ExpansionInputField : InputField
     protected override void Start()
     {
         base.Start();
-        // Android‚Í—ÌˆæŠO‚ğƒ^ƒbƒv‚Å‚«‚È‚¢‚Ì‚Å“ü—Í—“‚ğ‰B‚³‚È‚¢
+        // Androidã¯é ˜åŸŸå¤–ã‚’ã‚¿ãƒƒãƒ—ã§ããªã„ã®ã§å…¥åŠ›æ¬„ã‚’éš ã•ãªã„
         shouldHideMobileInput = false;
     }
 #endif
@@ -42,7 +42,7 @@ public class ExpansionInputField : InputField
         {
             if (touchScreenKeyboard.status == TouchScreenKeyboard.Status.Canceled)
             {
-                // ƒLƒƒƒ“ƒZƒ‹‚³‚ê‚½ê‡‚Í’¼‘O‚Ì’l‚ğ•Û
+                // ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã•ã‚ŒãŸå ´åˆã¯ç›´å‰ã®å€¤ã‚’ä¿æŒ
                 DeactivateInputField();
                 this.SetTextWithoutNotify(keyboardText_);
             }
@@ -55,7 +55,7 @@ public class ExpansionInputField : InputField
     }
 
     /// <summary>
-    /// ƒtƒH[ƒJƒX‰ğœ‚Éƒ‚ƒoƒCƒ‹ƒL[ƒ{[ƒh‚ğ•Â‚¶‚È‚¢
+    /// ãƒ•ã‚©ãƒ¼ã‚«ã‚¹è§£é™¤ã«ãƒ¢ãƒã‚¤ãƒ«ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚’é–‰ã˜ãªã„
     /// </summary>
     /// <param name="eventData"></param>
     public override void OnDeselect(BaseEventData eventData) {}

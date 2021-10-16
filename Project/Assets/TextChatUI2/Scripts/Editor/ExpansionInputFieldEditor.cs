@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -22,19 +22,19 @@ public class ExpansionInputFieldEditor : InputFieldEditor
         using (new EditorGUI.DisabledScope(true)) { EditorGUILayout.PropertyField(scriptProperty_); }
         base.OnInspectorGUI();
 
-        // XVƒ`ƒFƒbƒNŠJn
+        // æ›´æ–°ãƒã‚§ãƒƒã‚¯é–‹å§‹
         EditorGUI.BeginChangeCheck();
 
-        // ƒVƒŠƒAƒ‰ƒCƒYƒIƒuƒWƒFƒNƒgXV
+        // ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæ›´æ–°
         serializedObject.Update();
 
-        // •Ï”İ’è
+        // å¤‰æ•°è¨­å®š
         EditorGUILayout.PropertyField(closeTapAreaProperty_);
 
-        // ƒVƒŠƒAƒ‰ƒCƒYƒIƒuƒWƒFƒNƒgXV
+        // ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæ›´æ–°
         serializedObject.ApplyModifiedProperties();
 
-        // XVƒ`ƒFƒbƒNI—¹
+        // æ›´æ–°ãƒã‚§ãƒƒã‚¯çµ‚äº†
         EditorGUI.EndChangeCheck();
     }
 }

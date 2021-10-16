@@ -1,15 +1,15 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ‰¡ƒZ[ƒtƒGƒŠƒAŠOƒŒƒCƒAƒEƒg
+/// æ¨ªã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢å¤–ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ
 /// </summary>
 [RequireComponent(typeof(HorizontalLayoutGroup))]
 [RequireComponent(typeof(ContentSizeFitter))]
 public class HorizontalOutsideLayout : SafeAreaBehaviour
 {
     /// <summary>
-    /// ƒŒƒCƒAƒEƒgƒ^ƒCƒv
+    /// ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã‚¿ã‚¤ãƒ—
     /// </summary>
     [System.Serializable]
     private enum LayoutType
@@ -23,11 +23,11 @@ public class HorizontalOutsideLayout : SafeAreaBehaviour
     [SerializeField] private LayoutType layoutType = LayoutType.Left;
 
     /// <summary>
-    /// ƒŒƒCƒAƒEƒgXV
+    /// ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ›´æ–°
     /// </summary>
     protected override void UpdateLayout()
     {
-        // ‰Šúİ’è
+        // åˆæœŸè¨­å®š
         RectTransform selfRectTransform = GetRectTransform();
         Vector2 offsetMin = Vector2.zero;
         Vector2 offsetMax = Vector2.zero;
@@ -44,7 +44,7 @@ public class HorizontalOutsideLayout : SafeAreaBehaviour
             selfRectTransform.anchorMax = new Vector2(1.0f, 1.0f);
         }
 
-        // ‰¡•‚ğƒZ[ƒtƒGƒŠƒA“à‚É‚·‚é
+        // æ¨ªå¹…ã‚’ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢å†…ã«ã™ã‚‹
         Vector2 outsideOffsetMin = SafeAreaUtility.GetOutsideOffsetMin(this.transform);
         Vector2 outsideOffsetMax = SafeAreaUtility.GetOutsideOffsetMax(this.transform);
         if (isVerticalSafeArea)
@@ -53,11 +53,11 @@ public class HorizontalOutsideLayout : SafeAreaBehaviour
             offsetMax.y = outsideOffsetMax.y;
         }
 
-        // OffsetXV
+        // Offsetæ›´æ–°
         selfRectTransform.offsetMin = offsetMin;
         selfRectTransform.offsetMax = offsetMax;
 
-        // ƒZ[ƒtƒGƒŠƒAŠOXV
+        // ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢å¤–æ›´æ–°
         if (outside != null)
         {
             Vector2 sizeDelta = selfRectTransform.sizeDelta;
@@ -66,7 +66,7 @@ public class HorizontalOutsideLayout : SafeAreaBehaviour
             outside.sizeDelta = sizeDelta;
         }
 
-        // ƒŒƒCƒAƒEƒgXV
+        // ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ›´æ–°
         HorizontalLayoutGroup layoutGroup = this.GetComponent<HorizontalLayoutGroup>();
         layoutGroup.childControlHeight = true;
         layoutGroup.childScaleHeight = false;

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
 
 #if UNITY_EDITOR
@@ -6,7 +6,7 @@ using UnityEditor;
 #endif
 
 /// <summary>
-/// ƒZ[ƒtƒGƒŠƒAƒx[ƒX
+/// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢ãƒ™ãƒ¼ã‚¹
 /// </summary>
 [DisallowMultipleComponent]
 [ExecuteAlways]
@@ -22,16 +22,16 @@ public class SafeAreaBehaviour : UIBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        // XV‚ª‚ ‚é‚©
+        // æ›´æ–°ãŒã‚ã‚‹ã‹
         bool isUpdate = IsExistUpdate();
 
-        // ƒCƒ“ƒXƒyƒNƒ^[XVƒtƒ‰ƒO‚ğ–ß‚·
+        // ã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼æ›´æ–°ãƒ•ãƒ©ã‚°ã‚’æˆ»ã™
         isChangedValidate_ = false;
 
-        // ƒZ[ƒtƒGƒŠƒAXV
+        // ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢æ›´æ–°
         prevSafeArea_ = Screen.safeArea;
 
-        // ƒŒƒCƒAƒEƒgXV
+        // ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ›´æ–°
         if (isUpdate) { UpdateLayoutLock(); }
     }
 
@@ -43,7 +43,7 @@ public class SafeAreaBehaviour : UIBehaviour
 
 #if UNITY_EDITOR
     /// <summary>
-    /// ƒCƒ“ƒXƒyƒNƒ^[•ÏXŒŸ’m
+    /// ã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼å¤‰æ›´æ¤œçŸ¥
     /// </summary>
     protected override void OnValidate()
     {
@@ -53,31 +53,31 @@ public class SafeAreaBehaviour : UIBehaviour
 #endif
 
     /// <summary>
-    /// ƒƒbƒN‚ğ‚©‚¯‚ÄƒŒƒCƒAƒEƒg‚ğXV‚·‚é
+    /// ãƒ­ãƒƒã‚¯ã‚’ã‹ã‘ã¦ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     public void UpdateLayoutLock()
     {
-        // ƒƒbƒN’†‚Í–³‹
+        // ãƒ­ãƒƒã‚¯ä¸­ã¯ç„¡è¦–
         if (isLock_) { return; }
 
-        // ƒƒbƒN
+        // ãƒ­ãƒƒã‚¯
         isLock_ = true;
 
-        // ƒCƒ“ƒXƒyƒNƒ^[XVƒtƒ‰ƒO‚ğ–ß‚·
+        // ã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼æ›´æ–°ãƒ•ãƒ©ã‚°ã‚’æˆ»ã™
         isChangedValidate_ = false;
 
-        // ƒZ[ƒtƒGƒŠƒAXV
+        // ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢æ›´æ–°
         prevSafeArea_ = Screen.safeArea;
 
-        // ƒŒƒCƒAƒEƒgXV
+        // ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ›´æ–°
         UpdateLayout();
 
-        // ƒƒbƒN‰ğœ
+        // ãƒ­ãƒƒã‚¯è§£é™¤
         isLock_ = false;
     }
 
     /// <summary>
-    /// RectTransformæ“¾
+    /// RectTransformå–å¾—
     /// </summary>
     /// <returns></returns>
     public RectTransform GetRectTransform()
@@ -87,12 +87,12 @@ public class SafeAreaBehaviour : UIBehaviour
     }
 
     /// <summary>
-    /// ƒmƒbƒW‚ğXV‚·‚é
+    /// ãƒãƒƒã‚¸ã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     protected virtual void UpdateLayout() { }
 
     /// <summary>
-    /// XV‚ª‘¶İ‚·‚é‚©
+    /// æ›´æ–°ãŒå­˜åœ¨ã™ã‚‹ã‹
     /// </summary>
     /// <returns></returns>
     protected virtual bool IsExistUpdate()

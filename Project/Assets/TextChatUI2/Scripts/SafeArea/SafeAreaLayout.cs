@@ -1,8 +1,8 @@
-using System;
+ï»¿using System;
 using UnityEngine;
 
 /// <summary>
-/// ƒZ[ƒtƒGƒŠƒAƒŒƒCƒAƒEƒg
+/// ã‚»ãƒ¼ãƒ•ã‚¨ãƒªã‚¢ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ
 /// </summary>
 public class SafeAreaLayout : SafeAreaBehaviour
 {
@@ -42,11 +42,11 @@ public class SafeAreaLayout : SafeAreaBehaviour
     }
 
     /// <summary>
-    /// ƒmƒbƒW‚ğXV‚·‚é
+    /// ãƒãƒƒã‚¸ã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     protected override void UpdateLayout()
     {
-        // ‰Šúİ’è
+        // åˆæœŸè¨­å®š
         RectTransform selfRectTransform = GetRectTransform();
         selfRectTransform.pivot = new Vector2(0.5f, 0.5f);
         selfRectTransform.anchorMin = Vector2.zero;
@@ -54,13 +54,13 @@ public class SafeAreaLayout : SafeAreaBehaviour
         selfRectTransform.offsetMin = Vector2.zero;
         selfRectTransform.offsetMax = Vector2.zero;
 
-        // ƒXƒP[ƒŠƒ“ƒO
+        // ã‚¹ã‚±ãƒ¼ãƒªãƒ³ã‚°
         Vector2 safeAreaOffsetMin = SafeAreaUtility.GetOutsideOffsetMin(this.transform);
         Vector2 safeAreaOffsetMax = SafeAreaUtility.GetOutsideOffsetMax(this.transform);
         Vector2 offsetMin = Vector2.zero;
         Vector2 offsetMax = Vector2.zero;
 
-        // ƒgƒbƒvİ’è
+        // ãƒˆãƒƒãƒ—è¨­å®š
         if (!isInvalidTop)
         {
             if (top == null)
@@ -77,7 +77,7 @@ public class SafeAreaLayout : SafeAreaBehaviour
             }
         }
 
-        // ƒ{ƒgƒ€İ’è
+        // ãƒœãƒˆãƒ è¨­å®š
         if (!isInvalidBottom)
         {
             if (bottom == null)
@@ -94,7 +94,7 @@ public class SafeAreaLayout : SafeAreaBehaviour
             }
         }
 
-        // ƒŒƒtƒgİ’è
+        // ãƒ¬ãƒ•ãƒˆè¨­å®š
         if (!isInvalidLeft)
         {
             if (left == null)
@@ -111,7 +111,7 @@ public class SafeAreaLayout : SafeAreaBehaviour
             }
         }
 
-        // ƒ‰ƒCƒgİ’è
+        // ãƒ©ã‚¤ãƒˆè¨­å®š
         if (!isInvalidRight)
         {
             if (right == null)
@@ -128,11 +128,11 @@ public class SafeAreaLayout : SafeAreaBehaviour
             }
         }
 
-        // XV
+        // æ›´æ–°
         selfRectTransform.offsetMin = offsetMin;
         selfRectTransform.offsetMax = offsetMax;
 
-        // XVƒR[ƒ‹ƒoƒbƒNŒÄ‚Ño‚µ
+        // æ›´æ–°ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯å‘¼ã³å‡ºã—
         if (tempUpdatedCallback != null)
         {
             tempUpdatedCallback();
@@ -141,7 +141,7 @@ public class SafeAreaLayout : SafeAreaBehaviour
     }
 
     /// <summary>
-    /// XV‚ª‘¶İ‚·‚é‚©
+    /// æ›´æ–°ãŒå­˜åœ¨ã™ã‚‹ã‹
     /// </summary>
     /// <returns></returns>
     protected override bool IsExistUpdate()
@@ -157,7 +157,7 @@ public class SafeAreaLayout : SafeAreaBehaviour
     }
 
     /// <summary>
-    /// XV‚ª‘¶İ‚·‚é‚©
+    /// æ›´æ–°ãŒå­˜åœ¨ã™ã‚‹ã‹
     /// </summary>
     /// <param name="layoutType"></param>
     /// <returns></returns>
@@ -184,7 +184,7 @@ public class SafeAreaLayout : SafeAreaBehaviour
     }
 
     /// <summary>
-    /// Še•”ˆÊ‚ÌXV‚ª‘¶İ‚·‚é‚©
+    /// å„éƒ¨ä½ã®æ›´æ–°ãŒå­˜åœ¨ã™ã‚‹ã‹
     /// </summary>
     /// <param name="layoutBase"></param>
     /// <param name="prevSize"></param>
